@@ -36,7 +36,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
 
 * api
-   * models --> são as tabelas organizadas em arquivos.js
+   * models --> vamos criar o heroe.js e guns.js
 
 * config
    * datastore.js --> credenciais do seu banco Render
@@ -48,7 +48,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * routes.js --> são rotas que determinam como o aplicativo deve responder a diferentes requisições HTTP que chegam ao servidor.
 
 * views
-   * pastas que você irá criar (nesse caso será **mypages**). --> será o seu front-end
+   * pasta que você criará **mypages** --> será o seu front-end 
 
 * package.json (penúltimo arquivo) --> indica como estão as instâncias necessárias para o seu projeto.
 
