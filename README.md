@@ -374,6 +374,10 @@ Outro exemplo: se digitar  **http://localhost:1337/mypage**, o routes ficaria as
 '/mypage': { view: 'pages/mypage' },
 ```
 
+# Resolvendo problemas
+
+1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
+
 
 
 
