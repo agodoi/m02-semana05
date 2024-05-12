@@ -324,6 +324,14 @@ c) Abra o Thunder clicando na seta.
 
 d) Clique no boão **New Request**, depois 
 
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png)">
+</picture>
+
+https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png
+
 # Resolvendo problemas
 
 1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
