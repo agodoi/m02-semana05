@@ -341,6 +341,9 @@ d) Siga os seguintes passos:
    <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04v2.png)">
 </picture>
 
+	d.5) Seta laranja, escolha a opção **POST**
+
+ 	d.6) Seta azul, no campo **Enter URL** **http://localhost:1337/heroes**
 
 # Resolvendo problemas
 
