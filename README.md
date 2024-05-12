@@ -304,7 +304,7 @@ b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para
 </picture>
 
 
-c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical do Visual Code e clique no botão marcado pela seta.
+c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical do Visual Code e clique no botão **Extensions** marcado pela seta, digite **Thunder** e depois clique em **Install**.
 
 
 <picture>
@@ -313,11 +313,14 @@ c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical d
 </picture>
 
 
-Esse programa serve para você povoar seu banco de dados de forma rápida apenas para fazer testar de rotas GET e POST.
+Esse programa serve para você povoar seu banco de dados de forma rápida com comandos JSON e ao mesmo tempo, testar as rotas GET e POST que estão ou **routes.js**.
 
-c) Entre no Thunder Client e clique no botã 
+c) Abra o Thunder clicando na seta
 
-
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png)">
+</picture>
 
 # Resolvendo problemas
 
