@@ -329,7 +329,7 @@ d) Siga os seguintes passos:
    <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
 </picture>
 
-d.1) Seta vermelha, clique no boão **New Request** (seta vermelha)
+d.1) Seta vermelha, clique no botão **New Request** (seta vermelha)
 
 d.2) Seta amarela, clique em **Body**
 
