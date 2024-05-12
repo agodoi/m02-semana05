@@ -385,6 +385,9 @@ a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apon
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 ```
 
+Deixe o **</body>** e **</html>** no final de tudo sem mexer.
+
+
 # Resolvendo problemas
 
 1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
