@@ -351,7 +351,7 @@ d.6) Seta roxa, clique em **Send**.
 
 d.7) Vá no seu **DBeaver**, e confira se populou os dados da etapa **d.3**.
 
-d.8) Faça um novo POST usando esses dados repetindo do **d.2** até **d.7**.
+d.8) Faça um novo POST usando esses dados no **JSON Content**:
 
 ```
 {
@@ -361,6 +361,7 @@ d.8) Faça um novo POST usando esses dados repetindo do **d.2** até **d.7**.
   "secretIdentity": "Bruce Wayne"
 }
 ```
+d.9) Volta na seta laranja, altere **POST** para **GET** e clique em **Send** e você terá à sua direita, os dados que estão no seu banco de dados do Render.
 
 
 # Resolvendo problemas
