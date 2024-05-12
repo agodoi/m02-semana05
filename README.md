@@ -313,7 +313,7 @@ c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical d
 </picture>
 
 
-Esse programa serve para você povoar seu banco de dados de forma rápida com comandos JSON e ao mesmo tempo, testar as rotas GET e POST que estão ou **routes.js**.
+Esse programa serve para você popular o seu banco de dados de forma rápida com comandos JSON e ao mesmo tempo, testar as rotas GET e POST que estão ou **routes.js**.
 
 c) Abra o Thunder clicando na seta.
 
@@ -322,15 +322,25 @@ c) Abra o Thunder clicando na seta.
    <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png)">
 </picture>
 
-d) Clique no boão **New Request**, depois 
+d) Siga os seguintes passos:
 
-
+	d.1) Seta vermelha, clique no boão **New Request** (seta vermelha)
+ 	d.2) Seta amarela, clique em **Body**
+  	d.3) Seta verde, no campo **JSON Content** cole o código abaixo
+	```
+	{
+	  "name": "Homem Aranha",
+	  "power": "Agilidade e sensitivo",
+	  "age": 25,
+	  "secretIdentity": "Peter Parker"
+	}
+	```
+ 	d.4) 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png">
    <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png)">
 </picture>
 
-https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04.png
 
 # Resolvendo problemas
 
