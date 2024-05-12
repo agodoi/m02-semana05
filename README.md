@@ -11,7 +11,12 @@
 
 # Back-end II - Endpoints de leitura e escrita com documentação própria
 
-Nesta segunda instrução sobre back-end, aprofundaremos e construiremos relações de tabelas 1:N e N:N.
+Nesta segunda instrução sobre back-end, aprofundaremos e construiremos relações de tabelas 1:N.
+
+Orientações iniciais:
+
+1) Se seu Visual Code não estiver com salvamento automático, sempre digite **Ctrl+S** para salvar cada arquivo.
+2) Ainda estamos entendendo de back-end. Então, tudo que veremos aqui de front-end será uma espécie de caixa preta, mas nas próximas instruções, teremos mais tempo e calma para tratar disso.
 
 ## Etapa 1 - Criando um novo projeto Sails
 
@@ -43,7 +48,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * routes.js --> são rotas que determinam como o aplicativo deve responder a diferentes requisições HTTP que chegam ao servidor.
 
 * views
-   * pasta que você criará **mypages** --> será o seu front-end 
+   * pasta que você criará **hero**, **gun**, **herogun** --> será os seus front-ends 
 
 * package.json (penúltimo arquivo) --> indica como estão as instâncias necessárias para o seu projeto.
 
@@ -87,11 +92,11 @@ Caso apareça as velas, isto é, sails, sucesso na conexão!!! Se você for no s
 
 ## Etapa 5 - Criando um model (tabela)
 
-a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model heroe``` (enter). Ele vai criar um arquivo chamado **Heroe** no modelo Sails na pasta **\api\models**. Você poderia criar um arquivo manualmente **Heroe.js** sem problemas com o botão direito do mouse. Detalhe: mesmo que você coloque **heroe** com **h** minúsculo, o Sails vai transformar para **H** maiúsculo se usar o comando **sails generate model**.
+a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model heroe``` (enter). Ele vai criar um arquivo chamado **Hero** no modelo Sails na pasta **\api\models**. Você poderia criar um arquivo manualmente **Hero.js** sem problemas com o botão direito do mouse. Detalhe: mesmo que você coloque **hero** com **h** minúsculo, o Sails vai transformar para **H** maiúsculo se usar o comando **sails generate model**.
 
-b) Confira em **api/models** se seu arquivo **Heroe.js** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
+b) Confira em **api/models** se seu arquivo **Hero.js** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
 
-c) Limpe tudo que estiver dentro do **Heroe.js**, copie e cole esse código dentro do **api/models/Heroe.js**
+c) Limpe tudo que estiver dentro do **Hero.js**, copie e cole esse código dentro do **api/models/Hero.js**
 
 ```
 module.exports = {
@@ -280,15 +285,10 @@ Note que vamos habilitar uma rota de GET e um POST.
 module.exports.routes = {
   // Views
   "/": { view: "pages/homepage" },
-  //linha reservada para futura atualização
-  //linha reservada para futura atualização
-  //linha reservada para futura atualização
   
   // API
   "GET /heroes": "HeroesController.list",
-  //linha reservada para futura atualização
   "POST /heroes": "HeroesController.create",
-  //linha reservada para futura atualização
 };
 ```
 
@@ -387,7 +387,7 @@ a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apon
 
 Deixe o **</body>** e **</html>** no final de tudo sem mexer.
 
-# Desenvolvendo uma View: homepage.ejs
+# Etapa 11 - Desenvolvendo uma View: homepage.ejs
 
 a) Vá no arquivo **views/pages/homepage.ejs** seleciona tudo que é original, apague e cole esse código:
 
@@ -436,7 +436,7 @@ c) Digite **localhost:1337** no seu navegador e deve encontrar essa tela:
 COLOCA IMAGEM DO LIST OF HEROES
 
 
-# Desenvolvendo uma page: addhero.ejs
+# Etapa 12 - Desenvolvendo uma page: addhero.ejs
 
 a) Adicione um arquivo em branco no diretório **views/pages/** conforme mostra a figura. O nome do arquivo é **addhero.ejs**.
 
@@ -506,21 +506,17 @@ b) E dentro do arquivo **views/pages/addhero.ejs**, cole esse código:
 </script>
 ```
 
-c) Volte no arquivo **config\routes.js** e mexa na linha 4 deixando assim:
+c) Volte no arquivo **config\routes.js** e adicione a lista **"GET /addhero": { view: "pages/addhero" },** da forma que está sendo mostrado:
 
 ```
 module.exports.routes = {
   // Views
   "/": { view: "pages/homepage" },
   "GET /addhero": { view: "pages/addhero" },
-  //linha reservada para futura atualização
-  //linha reservada para futura atualização
   
   // API
   "GET /heroes": "HeroesController.list",
-  //linha reservada para futura atualização
   "POST /heroes": "HeroesController.create",
-  //linha reservada para futura atualização
 };
 ```
 
@@ -529,7 +525,295 @@ d) Dê um **sails l** (sails lift)
 
 e) digite na URL do seu navegador: **localhost:1337/addhero** e vai aparecer essa tela
 
+f) Preencha com os dados que você quiser e clique em **Submit**
+
+g) Vai aparecer a tela homepage com os novos dados que você inseriu.
+
+g) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá também.
+
 COLOCA IMAGEM ADD HERO
+
+
+# Etapa 13 - Adicionando um novo Model. Vamos fazer 1:N
+
+Vamos adicionar um novo model, chamado **Guns.js** e amarrar com o model **Heroe.js**.
+
+a) Vá no seu terminal, e dentro da pasta do seu projeto, digite **sails generate model guns**.
+
+b) Vá no path **api/models/Guns.js**, limpa tudo o que está lá e cole esse código:
+
+```
+module.exports = {
+  attributes: {
+    name: { type: "string", required: true },
+    type: { type: "string", required: true },
+
+    // Add a reference to Hero (foreing key do heroe)
+    owner: {
+      model: "hero",
+      required: true,
+    },
+  },
+};
+```
+c) Não esquece de salvar o seu projeto.
+
+# Etapa 14 - Criando um Controller
+
+Todo Model possui o seu Controller separado.
+
+a) Então, vá no seu terminal e dentro da sua pasta digite **sails generate controller guns**.
+
+b) Vá no path **api/controller/GunsController.js**, limpe tudo que estiver lá originalmente e cole esse código:
+
+```
+module.exports = {
+  create: async function (req, res) {
+    try {
+      const gun = await Gun.create(req.body).fetch();
+      return res.json(gun);
+    } catch (err) {
+      return res.serverError(err);
+    }
+  },
+};
+```
+
+c) Dê um novo **sails l** no seu diretório.
+
+d) Vá no seu DBeaver e veja se essa entidade (tabela) foi devidamente criada.
+
+# Etapa 15 - Ajustando o Routes.js
+
+Depois que você criou uma nova entidade, o **routes.js** precisa ter a rota de POST para ele.
+
+a) Vá no **config/routes.js** e adicione a linha **"POST /gun": "GunsController.create",** da forma que está sendo mostrado:
+
+
+```
+module.exports.routes = {
+  // Views
+  "/": { view: "pages/homepage" },
+  "GET /addhero": { view: "pages/addhero" },
+
+  
+  // API
+  "GET /heroes": "HeroesController.list",
+  "POST /heroes": "HeroesController.create",
+  "POST /gun": "GunsController.create",
+};
+```
+# Etapa 16 - Criando uma nova página (page) addgun.ejs
+
+Precisamos de um novo **views/pages/** que terá o nome de **addgun.ejs**.
+
+a) Para criar pages, não tem comando Sails. Precisa fazer manualmente como você fez na **Etapa 12**.
+
+b) Depois de adicionar um novo arquivo em **views/pages/** chamado **addgun.ejs**, limpe tudo que está originalmente lá e cole esse script que é um formulário:
+
+```
+<div class="container">
+  <h1>Add New Gun</h1>
+  <form id="add-gun-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" class="form-control" id="type" name="type" required>
+    </div>
+    <div class="form-group">
+      <label for="owner">Owner:</label>
+      <select class="form-control" id="owner" name="owner" required>
+        <!-- Opções de heróis serão adicionadas aqui dinamicamente -->
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script>
+  // Faz uma solicitação GET para obter os heróis disponíveis
+  fetch('/heroes')
+    .then(response => response.json())
+    .then(data => {
+      // Para cada herói na resposta, adiciona uma opção à caixa de seleção de proprietários
+      const ownerSelect = document.getElementById('owner');
+      data.forEach(hero => {
+        const option = document.createElement('option');
+        option.value = hero.id;
+        option.textContent = hero.name;
+        ownerSelect.appendChild(option);
+      });
+    })
+    .catch(error => console.error('Error fetching heroes:', error));
+
+  // Adiciona um evento de envio ao formulário
+  document.getElementById('add-gun-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita que o formulário seja enviado
+
+    // Obtém os valores do formulário
+    const name = document.getElementById('name').value;
+    const type = document.getElementById('type').value;
+    const owner = document.getElementById('owner').value;
+
+    // Envia uma solicitação POST para adicionar uma nova arma
+    fetch('/gun', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        type: type,
+        owner: owner
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        alert('Gun added successfully!');
+        // Redireciona para a página de listagem de armas
+        window.location.href = '/';
+      })
+      .catch(error => console.error('Error adding gun:', error));
+  });
+</script>
+```
+### Fica tranquilo que vamos falar mais sobre front-end nas próximas instruções.
+
+# Etapa 17 - Atualizando o routes.js
+
+Devido à criação da última página **addgun**, temos que atualizar o **routes.js**.
+
+a) No arquivo **config/routes.js** acrescente a linha **"GET /addgun": { view: "pages/addgun" },** conforme mostrado:
+
+```
+module.exports.routes = {
+  // Views
+  "/": { view: "pages/homepage" },
+  "GET /addhero": { view: "pages/addhero" },
+  "GET /addgun": { view: "pages/addgun" },
+  
+  // API
+  "GET /heroes": "HeroesController.list",
+  "POST /heroes": "HeroesController.create",
+  "POST /gun": "GunsController.create",
+};
+```
+b) Dê um **sails l** no seu terminal.
+
+c) Vá na URL do seu navegador e digite **localhost:1337/addgun** e preencha com os dados que desejar.
+
+Note que a coluna **Owner** está puxando dados da tabela **Heroe**.
+
+d) Dê o **Submit** da página que você está vendo (Add Gun).
+
+e) Você observará a homepage devido à esse comando **window.location.href = '/';** da linha 63 de **views/pages/addgun.ejs**
+
+f) Mas você não estará vendo a coluna **gun** que você acabou de adicionar.
+
+# Etapa 18 - Criando uma nova página
+
+Nessa nova página vamos listar as **guns** juntamente com os **heroes**.
+
+a) Novamente, para criar pages, não tem comando Sails. Precisa fazer manualmente como você fez na **Etapa 12**.
+
+b) Depois de adicionar um novo arquivo em **views/pages/** chamado **herogun.ejs**, limpe tudo que está originalmente lá e cole esse script que é um formulário:
+
+```
+<div class="container">
+  <h1>List of Guns and Heroes</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Age</th>
+        <th>Secret Identity</th>
+        <th>Guns</th>
+      </tr>
+    </thead>
+    <tbody id="heroes-list"></tbody>
+  </table>
+</div>
+
+<script>
+  fetch('/heroesandguns')
+    .then(response => response.json())
+    .then(data => {
+      const heroesList = document.getElementById('heroes-list');
+      data.forEach(hero => {
+        const row = document.createElement('tr');
+        let guns = ''; // Inicializa a variável para armazenar os nomes das armas
+
+        // Verifica se o herói possui armas associadas
+        if (hero.guns && hero.guns.length > 0) {
+          guns = hero.guns.map(gun => gun.name).join(', '); // Obtém os nomes das armas do herói
+        }
+
+        row.innerHTML = `
+          <td>${hero.id}</td>
+          <td>${hero.name}</td>
+          <td>${hero.power}</td>
+          <td>${hero.age}</td>
+          <td>${hero.secretIdentity}</td>
+          <td>${guns}</td>
+        `;
+
+        heroesList.appendChild(row);
+      });
+    })
+    .catch(error => console.error('Error fetching heroes:', error));
+</script>
+```
+
+# Etapa 19 - Atualizando o routes.js
+
+Devido à criação da última página **heroegun**, temos que atualizar o **routes.js**.
+
+a) Vá em **config/routes.js** e adicione **"GET /herogun": { view: "pages/herogun" },** como mostra a seguir:
+
+```
+module.exports.routes = {
+  // Views
+  "/": { view: "pages/homepage" },
+  "GET /addhero": { view: "pages/addhero" },
+  "GET /addgun": { view: "pages/addgun" },
+  "GET /herogun": { view: "pages/herogun" },
+  
+  // API
+  "GET /heroes": "HeroesController.list",
+  "POST /heroes": "HeroesController.create",
+  "POST /gun": "GunsController.create",
+};
+```
+b) Dê um **sails l** no seu terminal.
+
+c) Carregue a URL **localhost:1337/herogun** no seu nevegador, uma tabela será carregada, mas não vai aparecer a última coluna da direita **Guns**.
+
+O problema é que no HeroesController.js só está trazendo os heróis e não está trazendo as armas.
+
+d) Então, adicione mais uma linha no **config/routes.js** que é **"GET /heroesandguns": "HeroesController.listwithgun",** resultando finalmente em:
+
+```
+module.exports.routes = {
+  // Views
+  "/": { view: "pages/homepage" },
+  "GET /addhero": { view: "pages/addhero" },
+  "GET /addgun": { view: "pages/addgun" },
+  "GET /herogun": { view: "pages/herogun" },
+
+  // API
+  "GET /heroes": "HeroesController.list",
+  "GET /heroesandguns": "HeroesController.listwithgun",
+  "POST /heroes": "HeroesController.create",
+  "POST /gun": "GunsController.create",
+};
+```
+
+
 
 
 
