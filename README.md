@@ -506,10 +506,30 @@ b) E dentro do arquivo **views/pages/addhero.ejs**, cole esse código:
 </script>
 ```
 
+c) Volte no arquivo **config\routes.js** e mexa na linha 4 deixando assim:
+
+```
+module.exports.routes = {
+  // Views
+  "/": { view: "pages/homepage" },
+  "GET /addhero": { view: "pages/addhero" },
+  //linha reservada para futura atualização
+  //linha reservada para futura atualização
+  
+  // API
+  "GET /heroes": "HeroesController.list",
+  //linha reservada para futura atualização
+  "POST /heroes": "HeroesController.create",
+  //linha reservada para futura atualização
+};
+```
 
 
+d) Dê um **sails l** (sails lift)
 
+e) digite na URL do seu navegador: **localhost:1337/addhero** e vai aparecer essa tela
 
+COLOCA IMAGEM ADD HERO
 
 
 
