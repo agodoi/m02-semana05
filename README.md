@@ -299,8 +299,8 @@ a) Dê um **sails lift** no seu terminal e escolha o **alter**.
 b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para isso, instale essa extensão no seu Visual Code **Thunder Client**
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/Thunder%20Client.png">
-   <img alt="Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/Thunder%20Client.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/Thunder%20Client01.png">
+   <img alt="Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/Thunder%20Client01.png)">
 </picture>
 
 
@@ -308,8 +308,8 @@ c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical d
 
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente02.png">
-   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente02.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente02.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente02.png)">
 </picture>
 
 
@@ -318,8 +318,8 @@ Esse programa serve para você popular o seu banco de dados de forma rápida com
 c) Abra o Thunder clicando na seta.
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png">
-   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente03.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente03.png)">
 </picture>
 
 d) Siga os seguintes passos:
@@ -337,8 +337,8 @@ d.3) Seta verde, no campo **JSON Content** cole o código abaixo
 ```
 d.4) 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04v2.png">
-   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderCliente04v2.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
 </picture>
 
 d.5) Seta laranja, escolha a opção **POST**
