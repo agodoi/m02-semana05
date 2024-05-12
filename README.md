@@ -274,6 +274,8 @@ Esse arquivo serve para configurar as rotas.
 
 Copie e cole esse código para o seu routes.js e entenda o que está acontendo logo depois.
 
+Note que vamos habilitar uma rota de GET e um POST.
+
 ```
 module.exports.routes = {
   // Views
@@ -291,6 +293,12 @@ module.exports.routes = {
 ```
 
 # Faça um teste de conexão
+
+a) Dê um **sails lift** no seu terminal e escolha o **alter**.
+
+b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para isso, instale essa extensão no seu Visual Code **Thunder Client**
+
+
 
 # Resolvendo problemas
 
