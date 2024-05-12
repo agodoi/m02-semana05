@@ -813,10 +813,55 @@ module.exports.routes = {
 };
 ```
 
+# Etapa 20 - Atualizando o HeroesController.js
 
+Para que a homepage liste os itens da entendade **gun.js**, tem que mexer no **HeroesController.js**.
 
+a) Vá no arquivo **api/controller/HeroesController** e cole essa atualização abaixo. As mudanças são da linha 6 à 19:
 
+```
+module.exports = {
+  list: async (req, res) => {
+    const heroes = await Hero.find();
+    return res.json(heroes);
+  },
+  listwithgun: async (req, res) => {
+    try {
+      const query = "SELECT * FROM hero INNER JOIN gun ON hero.id = gun.owner";
+      const heroes = await Hero.getDatastore().sendNativeQuery(query);
 
+      if (heroes.rows && heroes.rows.length > 0) {
+        return res.json(heroes.rows);
+      } else {
+        return res.json([]);
+      }
+    } catch (err) {
+      return res.serverError(err);
+    }
+  },
+  create: async (req, res) => {
+    try {
+      const hero = await Hero.create(req.body).fetch();
+      return res.json(hero);
+    } catch (err) {
+      return res.serverError(err);
+    }
+  },
+};
+```
+b) Dê um **sails l** para renderizar tudo novamente.
+
+c) Agora, você pode fazer novos testes da seguinte forma:
+
+c.1) Digite **localhost:1337** na URL do navegador e você vai puxar os dados atuais;
+
+c.2) Digite **localhost:1337/addhero** para adicionar mais um super-herói;
+
+c.3) Digite **localhost:1337/addgun** para adicionar mais uma arma;
+
+c.4) Confira no seu DBeaver se a população está atualizada;
+
+c.5) Digite **localhost:1337/herogun** para conferir como a tabela final veio relacionada.
 
 
 
