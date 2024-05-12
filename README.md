@@ -252,52 +252,20 @@ c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/doc
 d) Copie esse código e cole no seu **api/controller/HeroesController.js**. Mas antes, apague tudo o que está no api/controller/HeroesController.js.
 
 ```
-/**
- * Heroes
- *
- * @description :: Server-side actions for handling incoming requests.
- * @help        :: See https://sailsjs.com/docs/concepts/actions
- */
-
 module.exports = {
-  create: async function(req, res){
-     Heroe.create(req.body)
-        .fetch()
-        .exec(function(err){
-            if(err) return (err);
-            return res.json({ sucess: "Parabéns! Seu herói foi criada." });
-    });
+  list: async (req, res) => {
+    const heroes = await Hero.find();
+    return res.json(heroes);
   },
 
-  getALL: async function(req, res){
-    Heroe.find().exec(function(err,tasks){
-        if(err) return res.severError(err);
-        return res.json(tasks);
-    });
+ create: async (req, res) => {
+    try {
+      const hero = await Hero.create(req.body).fetch();
+      return res.json(hero);
+    } catch (err) {
+      return res.serverError(err);
+    }
   },
-
-  getById: async function(req, res){
-    Heroe.findOne({ id: req.params.id }).exec(function(errs, task){
-        if(err) return res.serverError(err);
-        if(!task) return res.notFound();
-        return res.json(task);  
-    });
-  },
-
-  update: async function (req,res){
-    Heroe.update({ id: req.params.id }, req.body).exec(function(err) {
-        if(err) return res.serverError(err);
-        return res.json({message: "Herói atualizado com sucesso."});
-    });
-  },
-
-  delete: async function (req,res){
-    Heroe.destroy({ id: req.params.id }, req.body).exec(function(err) {
-        if(err) return res.serverError(err);
-        return res.json({message: "Herói apagado com sucesso."});
-    });
-  },
-};
 ```
 
 
@@ -308,25 +276,18 @@ Esse arquivo serve para configurar as rotas.
 Copie e cole esse código para o seu routes.js e entenda o que está acontendo logo depois.
 
 ```
-/**
- * Route Mappings
- * (sails.config.routes)
- *
- * Your routes tell Sails what to do each time it receives a request.
- *
- * For more information on configuring custom routes, check out:
- * https://sailsjs.com/anatomy/config/routes-js
- */
-
 module.exports.routes = {
-
-  '/': { view: 'pages/homepage' },
-  '/mypage': { view: 'pages/mypage' },
+  // Views
+  "/": { view: "pages/homepage" },
+  //linha reservada para futura atualização
+  //linha reservada para futura atualização
+  //linha reservada para futura atualização
+  
+  // API
+  "GET /heroes": "HeroesController.list",
+  //linha reservada para futura atualização
   "POST /heroes": "HeroesController.create",
-  "GET /heroes": "HeroesController.getAll",
-  "GET /heroes/:id": "HeroesController.getById",
-  "PUT /heroes/:id": "HeroesController.update",
-  "DELETE /heroes/:id": "HeroesController.delete",
+  //linha reservada para futura atualização
 };
 ```
 
