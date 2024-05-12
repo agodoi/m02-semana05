@@ -300,7 +300,7 @@ b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/Thunder Client.png">
-   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana5/blob/main/imgs/Thunder Client.png)">
+   <img alt="Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana5/blob/main/imgs/Thunder Client.png)">
 </picture>
 
 # Resolvendo problemas
