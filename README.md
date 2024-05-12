@@ -292,7 +292,7 @@ module.exports.routes = {
 };
 ```
 
-# Faça um teste de conexão
+# Etapa 9 - Faça um teste de conexão
 
 a) Dê um **sails lift** no seu terminal e escolha o **alter**.
 
@@ -361,7 +361,22 @@ d.8) Faça um novo POST usando esses dados no **JSON Content**:
   "secretIdentity": "Bruce Wayne"
 }
 ```
-d.9) Volta na seta laranja, altere **POST** para **GET** e clique em **Send** e você terá à sua direita, os dados que estão no seu banco de dados do Render.
+
+d.9) Confira se o Batman está no seu banco de dados. Use o DBeaber.
+
+d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e você terá à sua direita, os dados que estão no seu banco de dados do Render.
+
+# Etapa 10 - Desenvolvendo o Front-end
+
+a) Vá no arquivo views/layouts/layout, conforme mostra a figura:
+
+https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png">
+   <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png)">
+</picture>
 
 
 # Resolvendo problemas
