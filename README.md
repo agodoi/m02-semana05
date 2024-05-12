@@ -368,16 +368,23 @@ d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e
 
 # Etapa 10 - Desenvolvendo o Front-end
 
-a) Vá no arquivo views/layouts/layout, conforme mostra a figura:
-
-https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png
-
+a) Vá no arquivo views/layouts/layout, na linha 109 conforme mostra a figura, cole esse código:
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png">
    <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png)">
 </picture>
 
+```
+    <script src="/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JS com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+```
 
 # Resolvendo problemas
 
