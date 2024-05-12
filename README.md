@@ -22,7 +22,7 @@ Nesta segunda instrução sobre back-end, aprofundaremos e construiremos relaç�
 
 a) Abra o terminal e navegue até o diretório onde deseja criar o projeto.
    
-b) Execute o comando **sails new nome-projeto**.
+b) Execute o comando **sails new superheroes**. O comando genérico para criar um novo projeto em Sails: **sails new nomeProjeto**.
    - Este comando criará um novo projeto Sails com o nome especificado.
      
 c) Quando solicitado a escolher um modelo, selecione a opção **2 - Empty**.
@@ -30,10 +30,10 @@ c) Quando solicitado a escolher um modelo, selecione a opção **2 - Empty**.
 
 d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .** para carregar o projeto inteiro no Visual Code.
 
-## Quais as pastas importantes?
+## Atenção para as pastas importantes
 
-* api
-   * controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
+*-> api
+   *-> controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
 
 * api
    * models --> vamos criar o heroe.js e guns.js
