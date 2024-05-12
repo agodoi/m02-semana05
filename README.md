@@ -9,11 +9,6 @@
 * Quarta: 8h30 às 10h
 * Sexta: 8h30 às 9h30
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/arquiteturaNodeJS.png">
-   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/arquiteturaNodeJS.png)">
-</picture>
-
 # Back-end II - Endpoints de leitura e escrita com documentação própria
 
 Nesta segunda instrução sobre back-end, aprofundaremos e construiremos relações de tabelas 1:N e N:N.
