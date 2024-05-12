@@ -315,12 +315,14 @@ c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical d
 
 Esse programa serve para você povoar seu banco de dados de forma rápida com comandos JSON e ao mesmo tempo, testar as rotas GET e POST que estão ou **routes.js**.
 
-c) Abra o Thunder clicando na seta
+c) Abra o Thunder clicando na seta.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png">
    <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente03.png)">
 </picture>
+
+d) Clique no boão **New Request**, depois 
 
 # Resolvendo problemas
 
