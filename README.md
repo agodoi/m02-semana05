@@ -277,7 +277,7 @@ module.exports = {
 
 Esse arquivo serve para configurar as rotas. 
 
-Copie e cole esse código para o seu routes.js e entenda o que está acontendo logo depois.
+a) Copie e cole esse código para o seu routes.js e entenda o que está acontendo logo depois.
 
 Note que vamos habilitar uma rota de GET e um POST.
 
@@ -291,6 +291,8 @@ module.exports.routes = {
   "POST /heroes": "HeroesController.create",
 };
 ```
+
+b) Dê um **sails lift** para renderizar.
 
 # Etapa 9 - Faça um teste de conexão
 
