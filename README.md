@@ -324,8 +324,15 @@ c) Abra o Thunder clicando na seta.
 
 d) Siga os seguintes passos:
 
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png">
+   <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
+</picture>
+
 d.1) Seta vermelha, clique no boão **New Request** (seta vermelha)
+
 d.2) Seta amarela, clique em **Body**
+
 d.3) Seta verde, no campo **JSON Content** cole o código abaixo
 ```
 {
@@ -335,15 +342,26 @@ d.3) Seta verde, no campo **JSON Content** cole o código abaixo
   "secretIdentity": "Peter Parker"
 }
 ```
-d.4) 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png">
-   <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
-</picture>
 
-d.5) Seta laranja, escolha a opção **POST**
+d.4) Seta laranja, escolha a opção **POST**
 
-d.6) Seta azul, no campo **Enter URL** **http://localhost:1337/heroes**
+d.5) Seta azul, no campo **Enter URL** digite **http://localhost:1337/heroes**
+
+d.6) Seta roxa, clique em **Send**.
+
+d.7) Vá no seu **DBeaver**, e confira se populou os dados da etapa **d.3**.
+
+d.8) Faça um novo POST usando esses dados repetindo do **d.2** até **d.7**.
+
+```
+{
+  "name": "Batman",
+  "power": "Rico, Artes Marciais",
+  "age": 34,
+  "secretIdentity": "Bruce Wayne"
+}
+```
+
 
 # Resolvendo problemas
 
