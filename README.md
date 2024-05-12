@@ -299,8 +299,8 @@ a) Dê um **sails lift** no seu terminal e escolha o **alter**.
 b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para isso, instale essa extensão no seu Visual Code **Thunder Client**
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/thunderclient.png">
-   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana5/blob/main/imgs/thunderclient.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/Thunder Client.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana5/blob/main/imgs/Thunder Client.png)">
 </picture>
 
 # Resolvendo problemas
