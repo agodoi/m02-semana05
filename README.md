@@ -87,45 +87,30 @@ Caso apareça as velas, isto é, sails, sucesso na conexão!!! Se você for no s
 
 ## Etapa 5 - Criando um model (tabela)
 
-a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model Heroe``` (enter). Ele vai criar um arquivo chamado **Heroe** no modelo Sails na pasta **\api\models**. Você poderia criar um arquivo manualmente **Heroe.js** sem problemas com o botão direito do mouse.
+a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model heroe``` (enter). Ele vai criar um arquivo chamado **Heroe** no modelo Sails na pasta **\api\models**. Você poderia criar um arquivo manualmente **Heroe.js** sem problemas com o botão direito do mouse. Detalhe: mesmo que você coloque **heroe** com **h** minúsculo, o Sails vai transformar para **H** maiúsculo se usar o comando **sails generate model**.
 
 b) Confira em **api/models** se seu arquivo **Heroe.js** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
 
-c) Copie e cole esse código dentro do **api/models/Heroe.js**
-```
-/**
- * MyTable.js
- *
- * @description :: A model definition represents a database table/collection.
- * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
- */
+c) Limpe tudo que estiver dentro do **Heroe.js**, copie e cole esse código dentro do **api/models/Heroe.js**
 
+```
 module.exports = {
-tableName: "heroe",
   attributes: {
-    cpf: {
-      type: "string", //pode ter string, bool, float e number
-      required: true, //signica que é not null
-    },
     name: {
       type: "string",
-      required: true, //signica que é not null
+      required: true,
     },
-    last_name: {
+    power: {
       type: "string",
       required: true,
     },
     age: {
-      type: "string",
+      type: "number",
       required: true,
     },
-    status: {
+    secretIdentity: {
       type: "string",
       required: true,
-    },
-    type: {
-      type: "string",
-      defaultsTo: "others", //se passar NULL, automaticamente preencha com "others"
     },
   },
 };
@@ -155,15 +140,9 @@ Se tudo correu bem, você terá em seu Dbeaver algo assim como na figura:
 </picture>
 
 
-
-# Etapa 6 - Criando outro model
-
-
-
-
 # Etapa 6 - Ajustando o pai dos Models
 
-a) Vá no arquivo config/models.js e cole essa atualização. Ela serve para deixar todos os seus models já com os atributos **createdAt: { type: 'number', autoCreatedAt: true, }, updatedAt: { type: 'number', autoUpdatedAt: true, } e id: { type: 'number', autoIncrement: true, },**
+a) Vá no arquivo config/models.js e cole essa atualização. Se você comparar o arquivo **config/models.js** original com essa atualização, estamos apenas removendo os comentários das linhas 38 e 56, respectivamente **schema: true,** e **migrate: 'alter',**.
 
 ```
 /**
@@ -221,7 +200,8 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  migrate: 'alter', 
+  migrate: 'alter',
+
   //quando você escolhe a opção DEV na etapa 5, aqui fica 'alter' 
   //mas se você escolher TESTS, ele fica como 'drop'
   //o correto é deixar 'alter' enquanto vc está desenvolvendo porque
