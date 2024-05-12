@@ -270,6 +270,7 @@ module.exports = {
       return res.serverError(err);
     }
   },
+};
 ```
 
 
