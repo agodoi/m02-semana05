@@ -534,6 +534,15 @@ g) Vai aparecer a tela homepage com os novos dados que você inseriu.
 
 g) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá também.
 
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png">
+   <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png)">
+</picture>
+
+
+
+
 COLOCA IMAGEM ADD HERO
 
 
