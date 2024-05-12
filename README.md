@@ -442,11 +442,69 @@ a) Adicione um arquivo em branco no diretório **views/pages/** conforme mostra 
 
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/addhero01.png">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/addheroe01.png">
    <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/addheroe01.png)">
 </picture>
 
+b) E dentro do arquivo **views/pages/addhero.ejs**, cole esse código:
 
+```
+<div class="container">
+  <h1>Add New Hero</h1>
+  <form id="add-hero-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="power">Power:</label>
+      <input type="text" class="form-control" id="power" name="power" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" class="form-control" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="secretIdentity">Secret Identity:</label>
+      <input type="text" class="form-control" id="secretIdentity" name="secretIdentity" required>
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Submit</button>
+  </form>
+</div>
+
+<script>
+  // Adiciona um evento de envio ao formulário
+  document.getElementById('add-hero-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita que o formulário seja enviado
+
+    // Obtém os valores do formulário
+    const name = document.getElementById('name').value;
+    const power = document.getElementById('power').value;
+    const age = document.getElementById('age').value;
+    const secretIdentity = document.getElementById('secretIdentity').value;
+
+    // Envia uma solicitação POST para adicionar um novo herói
+    fetch('/heroes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        power: power,
+        age: age,
+        secretIdentity: secretIdentity
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        alert('Hero added successfully!');
+        window.location.href = '/';
+      })
+      .catch(error => console.error('Error adding hero:', error));
+  });
+</script>
+```
 
 
 
