@@ -28,7 +28,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
 ## Atenção para as pastas importantes
 
 * api
-   * -> controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
+   * controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
 
 * api
    * models --> vamos criar o heroe.js e guns.js
