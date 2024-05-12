@@ -366,7 +366,7 @@ d.9) Confira se o Batman está no seu banco de dados. Use o DBeaber.
 
 d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e você terá à sua direita, os dados que estão no seu banco de dados do Render.
 
-# Etapa 10 - Desenvolvendo o Front-end
+# Etapa 10 - Desenvolvendo o Layout do Front-end
 
 a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apontado pela seta, cole esse código:
 
@@ -386,6 +386,77 @@ a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apon
 ```
 
 Deixe o **</body>** e **</html>** no final de tudo sem mexer.
+
+# Desenvolvendo uma View: homepage.ejs
+
+a) Vá no arquivo **views/pages/homepage.ejs** seleciona tudo que é original, apague e cole esse código:
+
+```
+<div class="container">
+  <h1>List of Heroes</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Age</th>
+        <th>Secret Identity</th>
+      </tr>
+    </thead>
+    <tbody id="heroes-list"></tbody>
+  </table>
+</div>
+
+<script>
+  fetch('/heroes')
+    .then(response => response.json())
+    .then(data => {
+      const heroesList = document.getElementById('heroes-list');
+      data.forEach(hero => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                        <td>${hero.id}</td>
+                        <td>${hero.name}</td>
+                        <td>${hero.power}</td>
+                        <td>${hero.age}</td>
+                        <td>${hero.secretIdentity}</td>
+                    `;
+        heroesList.appendChild(row);
+      });
+    })
+    .catch(error => console.error('Error fetching heroes:', error));
+</script>
+```
+
+b) Dê um **Sails lift**
+
+c) Digite **localhost:1337** no seu navegador e deve encontrar essa tela:
+
+COLOCA IMAGEM DO LIST OF HEROES
+
+
+# Desenvolvendo uma page: addhero.ejs
+
+a) Adicione um arquivo em branco no diretório **views/pages/** conforme mostra a figura. O nome do arquivo é **addhero.ejs**.
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/addhero01.png">
+   <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/addheroe01.png)">
+</picture>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Resolvendo problemas
