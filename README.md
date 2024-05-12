@@ -303,6 +303,22 @@ b) Vamos fazer um INSERT no seu banco de dados Heroe sem usar comandos SQL. Para
    <img alt="Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/Thunder%20Client.png)">
 </picture>
 
+
+c) Para instalar a extensão Thunder Client, vá no seu menu esquerdo vertical do Visual Code e clique no botão marcado pela seta.
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente02.png">
+   <img alt="Instalando Thunder Cliente" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/ThunderCliente02.png)">
+</picture>
+
+
+Esse programa serve para você povoar seu banco de dados de forma rápida apenas para fazer testar de rotas GET e POST.
+
+c) Entre no Thunder Client e clique no botã 
+
+
+
 # Resolvendo problemas
 
 1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
