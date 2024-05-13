@@ -22,6 +22,15 @@ Orientações iniciais:
 
 Faça esse exemplo primeiro para você se acostumar com as pastas e arquivos. Depois, faça o exercício no final, que está relacionado com o seu projeto.
 
+# Antes de começar, conheça os principais problemas
+
+1) Se você encontrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
+2) Se sua coluna **Owner** estiver vazia é porque você apagou os dados do seu banco de dados manualmente via DBeaver. Basta popular seu banco novamente usando as URL localhost:1337/addhero e /addgun ou via comandos JSON usando o Thunder Client que vocÊ vai encontrar aqui no projeto.
+3) Se estiver dando erro após o **sails lift** pode ser que você não salvou os seus arquivos-fonte. Sempre dê **Ctrl+S**. Arquivos não salvos ficam com um bolinha preenchida antes do nome dele.
+4) Sempre dê **sails l** para qualquer alteração que fizer em qualquer arquivo das pastas do Sails.
+
+# Iniciando o projeto
+
 ## Etapa 1 - Criando um novo projeto Sails
 
 a) Abra o terminal e navegue até o diretório onde deseja criar o projeto.
@@ -913,15 +922,3 @@ Minha sugestão é que você substitua o seguinte:
 * onde começar com letra minúscula, você mantém minúscula. Onde começar com letra maiúscula, você mantém maiúsculo
 * onde estiver plural, você deixa plural. E onde estiver singular, você mantém singular.
 * Por enquanto vamos fazer em português, depois vc substitui para o inglês.
-
-
-# Resolvendo problemas
-
-1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
-2) Se sua coluna **Owner** estiver vazia é porque você apagou os dados do seu banco de dados manualmente via DBeaver. Basta popular seu banco novamente usando as URL localhost:1337/addhero e /addgun ou via comandos JSON usando o Thunder Client
-3) Se estiver dando erro após o **sails lift** pode ser que você não salvou os seus arquivos-fonte. Volta lá e veja se estão salvos. Arquivos não salvos ficam com um bolinha preenchida na frente do nome dele.
-4) Sempre dê **sails l** para qualquer alteração que fizer em qualquer arquivo das pastas do Sails.
-
-
-
-
