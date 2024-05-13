@@ -918,6 +918,9 @@ Minha sugestão é que você substitua o seguinte:
 # Resolvendo problemas
 
 1) Se você contrar essa mensagem **> Is something else already running on port 1337 ?** significa que você está rodando um outra aplicação Sails. Cancele uma delas.
+2) Se sua coluna **Owner** estiver vazia é porque você apagou os dados do seu banco de dados manualmente via DBeaver. Basta popular seu banco novamente usando as URL localhost:1337/addhero e /addgun ou via comandos JSON usando o Thunder Client
+3) Se estiver dando erro após o **sails lift** pode ser que você não salvou os seus arquivos-fonte. Volta lá e veja se estão salvos. Arquivos não salvos ficam com um bolinha preenchida na frente do nome dele.
+4) Sempre dê **sails l** para qualquer alteração que fizer em qualquer arquivo das pastas do Sails.
 
 
 
