@@ -553,14 +553,10 @@ g) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá també
 
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png">
-   <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/addheroe02.png">
+   <img alt="Add Hero Ok!" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/addheroe02.png)">
 </picture>
 
-
-
-
-COLOCA IMAGEM ADD HERO
 
 
 # Etapa 13 - Adicionando um novo Model. Vamos fazer 1:N
