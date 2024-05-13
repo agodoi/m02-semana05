@@ -379,12 +379,16 @@ d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e
 
 # Etapa 10 - Desenvolvendo o Layout do Front-end
 
-a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apontado pela seta, cole esse código:
+a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apontado pela seta.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png">
    <img alt="Layout" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png)">
 </picture>
+
+
+b) E cole esse código:
+A função dele é instalar o Bootstrap no seu projeto. Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
 
 ```
 <script src="/dependencies/sails.io.js"></script>
