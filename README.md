@@ -561,11 +561,11 @@ g) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá també
 
 # Etapa 13 - Adicionando um novo Model. Vamos fazer 1:N
 
-Vamos adicionar um novo model, chamado **Guns.js** e amarrar com o model **Heroe.js**.
+Vamos adicionar um novo model, chamado **Gun.js** e amarrar com o model **Hero.js**.
 
-a) Vá no seu terminal, e dentro da pasta do seu projeto, digite **sails generate model guns**.
+a) Vá no seu terminal, e dentro da pasta do seu projeto, digite **sails generate model gun**.
 
-b) Vá no path **api/models/Guns.js**, limpa tudo o que está lá e cole esse código:
+b) Vá no path **api/models/Gun.js**, limpa tudo o que está lá e cole esse código:
 
 ```
 module.exports = {
