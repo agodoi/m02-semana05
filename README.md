@@ -400,7 +400,7 @@ A função dele é instalar o Bootstrap no seu projeto. Bootstrap é um framewor
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 ```
 
-c) Deixe o **</body>** e **</html>** no final de tudo sem mexer.
+c) Deixe o ```</body>``` e ```</html>``` no final de tudo sem mexer.
 
 # Etapa 11 - Desenvolvendo uma View: homepage.ejs
 
