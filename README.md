@@ -379,7 +379,7 @@ d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e
 
 # Etapa 10 - Desenvolvendo o Layout do Front-end
 
-a) Vá no arquivo views/layouts/layout, na linha 109 conforme o local está apontado pela seta.
+a) Vá no arquivo **views/layouts/layout**, na linha 112 conforme o local está apontado pela seta.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/layout01.png">
@@ -400,7 +400,7 @@ A função dele é instalar o Bootstrap no seu projeto. Bootstrap é um framewor
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 ```
 
-Deixe o **</body>** e **</html>** no final de tudo sem mexer.
+c) Deixe o **</body>** e **</html>** no final de tudo sem mexer.
 
 # Etapa 11 - Desenvolvendo uma View: homepage.ejs
 
