@@ -29,7 +29,7 @@ Faça esse exemplo primeiro para você se acostumar com as pastas e arquivos. De
 3) Se estiver dando erro após o **sails lift** pode ser que você não salvou os seus arquivos-fonte. Sempre dê **Ctrl+S**. Arquivos não salvos ficam com um bolinha preenchida antes do nome dele.
 4) Sempre dê **sails l** para qualquer alteração que fizer em qualquer arquivo das pastas do Sails.
 
-# Iniciando o projeto
+# Iniciando o projeto...
 
 ## Etapa 1 - Criando um novo projeto Sails
 
