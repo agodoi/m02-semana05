@@ -549,7 +549,7 @@ f) Preencha com os dados que você quiser e clique em **Submit**
 
 g) Vai aparecer a tela homepage com os novos dados que você inseriu.
 
-g) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá também.
+h) Vá no seu DBeaver e confira se populou lá também. Tem que estar lá também.
 
 
 <picture>
@@ -730,7 +730,7 @@ b) Dê um **sails l** no seu terminal.
 
 c) Vá na URL do seu navegador e digite **localhost:1337/addgun** e preencha com os dados que desejar.
 
-Note que a coluna **Owner** está puxando dados da tabela **Heroe**.
+#### Note que a coluna **Owner** está puxando dados da tabela **Heroe**. Se estiver vazia é porque você apagou seu banco de dados manualmente em alguma etapa. Refaça o preenchimento com localhost:1337/addhero e depois faça localhost:1337/addgun
 
 d) Dê o **Submit** da página que você está vendo (Add Gun).
 
