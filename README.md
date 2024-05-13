@@ -369,8 +369,8 @@ d.9) Confira se o Batman está no seu banco de dados. Use o DBeaber. E você pod
 
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png">
-   <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png">
+   <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient05.png)">
 </picture>
 
 
