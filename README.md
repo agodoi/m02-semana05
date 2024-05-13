@@ -890,6 +890,26 @@ c.5) Digite **localhost:1337/herogun** para conferir como a tabela final veio re
 
 
 
+# Exercício
+
+Após finalizar a execução de todas as etapas, sua missão será refazer exatamente os mesmos passos, mas agora adaptando para o seu projeto.
+Minha sugestão é que você substitua o seguinte:
+
+* Hero --> Funcionario
+	* name --> nome
+ 	* power --> sobrenome
+  	* age --> idade
+  	* secret identity --> departamento 
+* Heroes --> Funcionarios
+* Gun --> Cargo
+	* name --> nome
+ 	* Type --> turno
+  	* Owner --> mantem Owner   
+* Guns --> Cargos
+* onde começar com letra minúscula, você mantém minúscula. Onde começar com letra maiúscula, você mantém maiúsculo
+* onde estiver plural, você deixa plural. E onde estiver singular, você mantém singular.
+* Por enquanto vamos fazer em português, depois vc substitui para o inglês.
+
 
 # Resolvendo problemas
 
