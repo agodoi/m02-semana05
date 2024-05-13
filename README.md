@@ -730,7 +730,7 @@ b) Dê um **sails l** no seu terminal.
 
 c) Vá na URL do seu navegador e digite **localhost:1337/addgun** e preencha com os dados que desejar.
 
-### Note que a coluna **Owner** está puxando dados da tabela **Heroe**. Se estiver vazia é porque você apagou seu banco de dados manualmente usando DBeaver. Refaça o preenchimento com localhost:1337/addhero ou usando o ThunderClient e depois faça localhost:1337/addgun
+### Note que a coluna Owner está puxando dados da tabela **Heroe**. Se estiver vazia é porque você apagou seu banco de dados manualmente usando DBeaver. Refaça o preenchimento com localhost:1337/addhero ou usando o ThunderClient e depois faça localhost:1337/addgun
 
 d) Dê o **Submit** da página que você está vendo (Add Gun).
 
