@@ -916,8 +916,8 @@ Minha sugestão é que você substitua o seguinte:
 * Heroes --> Funcionarios
 * Gun --> Cargo
 	* name --> nome
- 	* Type --> turno
-  	* Owner --> mantem Owner   
+ 	* type --> turno
+  	* owner --> mantem owner   
 * Guns --> Cargos
 * onde começar com letra minúscula, você mantém minúscula. Onde começar com letra maiúscula, você mantém maiúsculo
 * onde estiver plural, você deixa plural. E onde estiver singular, você mantém singular.
