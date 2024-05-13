@@ -18,6 +18,10 @@ Orientações iniciais:
 1) Se seu Visual Code não estiver com salvamento automático, sempre digite **Ctrl+S** para salvar cada arquivo.
 2) Ainda estamos entendendo de back-end. Então, tudo que veremos aqui de front-end será uma espécie de caixa preta, mas nas próximas instruções, teremos mais tempo e calma para tratar disso.
 
+# No seu projeto
+
+Faça esse exemplo primeiro para você se acostumar com as pastas e arquivos. Depois, faça o exercício no final, que está relacionado com o seu projeto.
+
 ## Etapa 1 - Criando um novo projeto Sails
 
 a) Abra o terminal e navegue até o diretório onde deseja criar o projeto.
