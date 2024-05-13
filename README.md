@@ -365,7 +365,15 @@ d.8) Faça um novo POST usando esses dados no **JSON Content**:
 }
 ```
 
-d.9) Confira se o Batman está no seu banco de dados. Use o DBeaber.
+d.9) Confira se o Batman está no seu banco de dados. Use o DBeaber. E você pode conferir se você teve esse retorno como o da imagem a seguir.
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png">
+   <img alt="Usando Thunder Client" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/ThunderClient04v2.png)">
+</picture>
+
+
 
 d.10) Volte na seta laranja, altere **POST** para **GET** e clique em **Send** e você terá à sua direita, os dados que estão no seu banco de dados do Render.
 
