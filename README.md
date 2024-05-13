@@ -448,7 +448,12 @@ b) Dê um **Sails lift**
 
 c) Digite **localhost:1337** no seu navegador e deve encontrar essa tela:
 
-COLOCA IMAGEM DO LIST OF HEROES
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana05/blob/main/imgs/Homepage01.png">
+   <img alt="Homepage" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana05/blob/main/imgs/Homepage01.png)">
+</picture>
+
 
 
 # Etapa 12 - Desenvolvendo uma page: addhero.ejs
